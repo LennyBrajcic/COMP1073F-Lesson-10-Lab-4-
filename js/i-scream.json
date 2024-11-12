@@ -25,6 +25,22 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
-    }
+    },
+
+    {
+      "name": "Blueberry Cheesecake",
+      "image": "ice-cream-xtra1.svg",
+      "calories": 300,
+      "type": "ice cream",
+      "ingredients": ["Milk", "Sugar", "Blueberries"]
+  },
+  {
+      "name": "Caramel Swirl",
+      "image": "ice-cream-xtra2.svg",
+      "calories": 270,
+      "type": "ice cream",
+      "ingredients": ["Milk", "Sugar", "Caramel"]
+  }
+
   ]
 }
