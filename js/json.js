@@ -6,13 +6,13 @@ const section = document.querySelector('section');
 async function populate(){
     // Introducing JavaScript Object Notation (JSON): https://json.org/
     // STEP 4: Store the URL of a JSON file in a variable */
-    const requestURL = ''
+    const requestURL = './js/i-scream.json'
     // STEP 5: Use the new URL to create a new request object
     const request = new Request(requestURL);
     // STEP 6: Make a network request with the fetch() function, which returns a Response object
     const response = await fetch(request);
     // STEP 7: Capture the returned Response object and covert to a JSON object using json()
-    const iScream = await response(JSON)
+    const iScream = await response.json();
     // STEP 8: Output the iScream JSON object to the console 
     console.log(iScream);
     // STEP 9a: Invoke the populateHeader function here, then build it below
@@ -22,10 +22,10 @@ async function populate(){
 }
 
 // STEP 3b: Call the populate() function
-
+populate();
 
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader() {
+function populateHeader(jsonObj) {
     // Create the H1 element
     const headerH1 = document.createElement('h1');
     // Grab the company name from the JSON object and use it for the text node
@@ -34,7 +34,7 @@ function populateHeader() {
     header.append(headerH1);
 };
 /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors() {
+function showTopFlavors(jsonObj) {
     // STEP 10c: Attache the JSON topFlavors object to a variable
     let topFlavors = jsonObj.topFlavors;
 
@@ -49,7 +49,7 @@ function showTopFlavors() {
 
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         h2.textContent = topFlavors[i]['name'];
-        image.setAttribute('src','https' + topFlavors[i].image)
+        image.setAttribute('src', `./images/${topFlavors[i].image}`);
 
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavors[i]['ingredients'];
@@ -66,7 +66,7 @@ function showTopFlavors() {
         article.appendChild(ul);
 
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
-        article.appendChild(article);
+        section.appendChild(article);
 
     };
 };
