@@ -28,18 +28,18 @@
     },
 
     {
-      "name": "Blueberry Cheesecake",
+      "name": "Lime Sherbet",
       "image": "ice-cream-xtra1.svg",
       "calories": 300,
       "type": "ice cream",
-      "ingredients": ["Milk", "Sugar", "Blueberries"]
+      "ingredients": ["Milk", "Sugar", "Lime"]
   },
   {
-      "name": "Caramel Swirl",
+      "name": "Vanilla Chip",
       "image": "ice-cream-xtra2.svg",
       "calories": 270,
       "type": "ice cream",
-      "ingredients": ["Milk", "Sugar", "Caramel"]
+      "ingredients": ["Milk", "Sugar", "dark chocolate chips"]
   }
 
   ]
